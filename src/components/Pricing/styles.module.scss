@@ -1,0 +1,142 @@
+.pricing {
+  margin: 100px 0;
+  background: linear-gradient(135deg, #007e72 0%, #4de4a7 50.04%, #95fcd2 100%);
+  border-radius: 40px;
+  &__card {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    padding: clamp(0.875rem, 0.281rem + 2.97vw, 3.25rem) 24px;
+    background-color: #fff;
+    border-radius: 24px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    background-image: url(../../assets/pricing.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: cover;
+    padding: 40px;
+    h2 {
+      font-family: "Sora", sans-serif;
+
+      font-family: Sora;
+      font-weight: 600;
+      font-size: clamp(1.875rem, 1.344rem + 2.66vw, 4rem);
+      letter-spacing: 0%;
+      color: #fff;
+    }
+  }
+  &__textGradient {
+    font-family: "Sora", sans-serif;
+    background-color: #fff;
+    width: max-content;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-family: Sora;
+    font-weight: 600;
+    font-size: clamp(1.875rem, 1.344rem + 2.66vw, 4rem);
+    line-height: 56px;
+    letter-spacing: 0%;
+
+    span {
+      background: var(--main-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: clamp(3.125rem, 2.344rem + 3.91vw, 6.25rem) 60px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "pricing__card1 ."
+      ". pricing__card2"
+      "pricing__card3 .";
+
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__card1 {
+    grid-area: pricing__card1;
+    &::after {
+      content: "";
+      position: absolute;
+      right: -300px;
+      background-image: url(../../assets/pricingRow1.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 300px;
+      height: 300px;
+    }
+    @media (max-width: 768px) {
+      &::after {
+        display: none;
+        content: none;
+      }
+    }
+  }
+  &__card2 {
+    grid-area: pricing__card2;
+  }
+  &__card3 {
+    grid-area: pricing__card3;
+    &::after {
+      content: "";
+      position: absolute;
+      right: -350px;
+      top: -80px;
+      background-image: url(../../assets/pricingRow2.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 300px;
+      height: 300px;
+    }
+    @media (max-width: 768px) {
+      &::after {
+        display: none;
+        content: none;
+      }
+    }
+  }
+  &__card__title {
+    font-family: "Clash Display";
+    font-weight: 600;
+    font-size: clamp(1.125rem, 0.969rem + 0.78vw, 1.75rem);
+    color: rgba(0, 126, 114, 1);
+  }
+  &__card__description {
+    font-family: "Clash Display";
+    font-weight: 500;
+    font-size: clamp(0.875rem, 0.719rem + 0.78vw, 1.5rem);
+    color: rgba(33, 40, 49, 1);
+  }
+  &__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: -30px;
+    top: -50px;
+    width: clamp(3.25rem, 2.469rem + 3.91vw, 6.375rem);
+    height: clamp(3.25rem, 2.469rem + 3.91vw, 6.375rem);
+    border-radius: 100px;
+    background: rgba(0, 126, 114, 1);
+    font-family: "Clash Display";
+    font-weight: 500;
+    font-size: clamp(2.375rem, 2.016rem + 1.8vw, 3.813rem);
+    color: rgba(255, 255, 255, 1);
+  }
+  &__title {
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
+  }
+}

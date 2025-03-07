@@ -1,0 +1,108 @@
+.questions {
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100%;
+  margin: 100px 0;
+  @media (max-width: 768px) {
+    background-image: var(--main-gradient) !important;
+    // background-image: none !important;
+  }
+  &__gradient {
+    @media (max-width: 500px) {
+      flex-direction: column !important;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url(../../assets/starsIcon.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 260px;
+    height: 260px;
+    top: -140px;
+    left: -60px;
+  }
+  h2 {
+    font-family: Sora;
+    font-weight: 600;
+    font-size: clamp(2rem, 1.5rem + 2.5vw, 4rem);
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #fff;
+  }
+
+  &__textGradient {
+    font-family: "Sora", sans-serif;
+    background-color: #fff;
+    width: max-content;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-family: Sora;
+    font-weight: 600;
+    font-size: clamp(1.875rem, 1.594rem + 1.41vw, 3rem);
+    letter-spacing: 0%;
+
+    span {
+      background: var(--main-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__description {
+    font-family: Sora;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.719rem + 0.78vw, 1.5rem);
+    letter-spacing: 0.5%;
+    color: #fff;
+  }
+
+  &__inputs {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  &__input {
+    background-color: #fff;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+  }
+
+  &__button {
+    font-family: Clash Display;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 20px;
+    color: #fff;
+    background-color: none !important;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+  &__icon {
+    background-color: #fff;
+    border-radius: 20px;
+    border: none;
+    svg {
+      border-radius: 10px;
+    }
+  }
+  &__empty {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  &__grid {
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr !important;
+      padding: 30px;
+    }
+  }
+}

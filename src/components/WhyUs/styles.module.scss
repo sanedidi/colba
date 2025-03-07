@@ -1,0 +1,68 @@
+.whyus {
+  margin: 0 0 100px;
+  &__item {
+    background-color: rgba(13, 227, 206, 0.12);
+    padding: clamp(0.875rem, 0.719rem + 0.78vw, 1.5rem);
+    border-radius: 24px;
+    height: auto;
+  }
+  &__items {
+    @media (max-width: 500px) {
+      grid-template-columns: 1fr !important;
+    }
+  }
+  &__title {
+    font-family: "Clash Display";
+    font-weight: 600;
+    font-size: clamp(1.875rem, 1.344rem + 2.66vw, 4rem);
+    letter-spacing: -2%;
+    text-align: center;
+    text-transform: uppercase;
+    span {
+      background: var(--main-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  &__icon {
+    background-color: #ffffff;
+    width: max-content;
+    padding: 12px;
+    border-radius: 16px;
+  }
+  &__text {
+    h2 {
+      font-family: "Clash Display";
+      font-weight: 600;
+      font-size: clamp(0.875rem, 0.719rem + 0.78vw, 1.5rem);
+      letter-spacing: 0%;
+      color: rgba(0, 126, 114, 1);
+    }
+    p {
+      font-family: "Clash Display";
+      font-weight: 500;
+      font-size: clamp(0.625rem, 0.531rem + 0.47vw, 1rem);
+      color: rgba(33, 40, 49, 1);
+      margin-top: auto;
+    }
+  }
+  &__button {
+    background: linear-gradient(
+      135deg,
+      #007e72 0%,
+      #4de4a7 50.04%,
+      #95fcd2 100%
+    );
+    border-radius: 50px;
+    border: none;
+    margin: 0 auto;
+    font-family: "Clash Display";
+    font-weight: 600;
+    font-size: 18px;
+  }
+  &__img {
+    @media (max-width: 786px) {
+      display: none;
+    }
+  }
+}

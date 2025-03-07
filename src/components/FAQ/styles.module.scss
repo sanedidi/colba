@@ -1,0 +1,70 @@
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(135deg, #007e72 0%, #4de4a7 50.04%, #95fcd2 100%);
+  border-radius: 40px;
+  padding: clamp(1.875rem, 1.406rem + 2.34vw, 3.75rem);
+  transition: all 0.3s ease-in-out;
+  &::after {
+    content: "";
+    background-image: url(../../assets/twinkle.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    bottom: -40px;
+    right: -40px;
+    width: 350px;
+    height: 350px;
+  }
+  &__textGradient {
+    font-family: "Sora", sans-serif;
+    background-color: #fff;
+    width: max-content;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-family: Sora;
+    font-weight: 600;
+    font-size: clamp(2.125rem, 1.656rem + 2.34vw, 4rem);
+    letter-spacing: 0%;
+    span {
+      background: var(--main-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  &__title {
+    @media (max-width: 500px) {
+      flex-direction: column;
+    }
+    h2 {
+      font-family: Clash Display;
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 56px;
+      letter-spacing: 0%;
+      color: #fff;
+    }
+  }
+  &__accordion_title {
+    font-family: Clash Display;
+    font-weight: 600;
+    font-size: clamp(0.75rem, 0.625rem + 0.63vw, 1.25rem);
+    letter-spacing: 0%;
+    color: #212831;
+  }
+  &__grid {
+    @media (max-width: 768px) {
+      display: flex !important;
+      flex-direction: column;
+    }
+  }
+  .faqItemTrigger {
+    cursor: pointer;
+    padding: 20px;
+    background-color: #fff;
+  }
+}

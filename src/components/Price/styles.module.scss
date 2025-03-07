@@ -1,0 +1,50 @@
+.price {
+  margin: 100px 0;
+  position: relative;
+  &::before {
+    content: "";
+    background-image: url(../../assets/starsIcon1.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: -100px;
+    right: -55px;
+  }
+  &__title {
+    font-family: Clash Display;
+    font-weight: 600;
+    font-size: clamp(1.875rem, 1.344rem + 2.66vw, 4rem);
+    line-height: 100%;
+    letter-spacing: -2%;
+    text-align: center;
+  }
+  &__cards {
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr !important;
+    }
+  }
+  &__card {
+    background-color: #0de3ce1f;
+    padding: 30px;
+    border-radius: 24px;
+    h2 {
+      font-family: "Clash Display";
+      font-weight: 600;
+      font-size: clamp(1.875rem, 1.344rem + 2.66vw, 4rem);
+
+      letter-spacing: 0%;
+      text-transform: uppercase;
+      color: #007e72;
+      span {
+        font-family: Clash Display;
+        font-weight: 600;
+        font-size: 32px;
+        letter-spacing: 0%;
+        text-transform: uppercase;
+        color: #007e72;
+      }
+    }
+  }
+}

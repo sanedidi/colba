@@ -1,0 +1,71 @@
+.num {
+  padding: clamp(3.125rem, 2.344rem + 3.91vw, 6.25rem) 0;
+  &__title {
+    font-family: "Clash Display";
+    font-weight: 600;
+    font-size: clamp(2.125rem, 1.656rem + 2.34vw, 4rem);
+    letter-spacing: -2%;
+    text-align: center;
+    margin: 0 auto;
+
+    span {
+      background: var(--main-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas:
+      "num__item1 num__item1 num__item1 num__item2 num__item2"
+      "num__item3 num__item3 num__item4 num__item4 num__item4";
+    @media (max-width: 768px) {
+      display: flex !important;
+      flex-direction: column;
+    }
+  }
+  &__item1 {
+    grid-area: num__item1;
+  }
+  &__item2 {
+    grid-area: num__item2;
+  }
+  &__item3 {
+    grid-area: num__item3;
+  }
+  &__item4 {
+    grid-area: num__item4;
+  }
+  &__icon {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 24px;
+    width: max-content;
+    @media (max-width: 768px) {
+      padding: 10px;
+      border-radius: 14px;
+    }
+  }
+  &__cont {
+    h2 {
+      font-family: Clash Display;
+      font-weight: 600;
+      font-size: clamp(3.125rem, 2.656rem + 2.34vw, 5rem);
+      line-height: 90px;
+      letter-spacing: 0%;
+      text-transform: uppercase;
+      color: #007e72;
+    }
+    p {
+      font-family: Clash Display;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 28px;
+      letter-spacing: 0%;
+      color: #212831;
+    }
+  }
+}

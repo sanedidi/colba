@@ -1,0 +1,45 @@
+.command {
+  padding: 100px 0;
+  &__title {
+    font-family: "Clash Display";
+    font-weight: 600;
+    font-size: clamp(2.125rem, 1.656rem + 2.34vw, 4rem);
+    line-height: 78.72px;
+    letter-spacing: -2%;
+    text-align: center;
+    margin: 0 auto;
+
+    span {
+      background: var(--main-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  &__card {
+    background-color: #0de3ce1f;
+    padding: 23px;
+    border-radius: 24px;
+    min-width: 400px;
+    img {
+      height: 350px;
+      border-radius: 10px;
+    }
+    h2 {
+      font-family: Clash Display;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 36px;
+      letter-spacing: 0%;
+      text-transform: uppercase;
+      color: #007e72;
+    }
+    p {
+      font-family: Clash Display;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 28px;
+      letter-spacing: 0%;
+      color: #212831;
+    }
+  }
+}

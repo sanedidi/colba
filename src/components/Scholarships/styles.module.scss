@@ -1,0 +1,109 @@
+.pay {
+  position: relative;
+  padding: clamp(0rem, -0.781rem + 3.91vw, 3.125rem) 0 0;
+  &::before {
+    content: "";
+    background-image: url(../../assets/rowColor.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    top: -140px;
+    right: 160px;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  &__grid {
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr !important;
+    }
+  }
+  &__title {
+    font-family: Clash Display;
+    font-weight: 600;
+    font-size: clamp(1.875rem, 1.344rem + 2.66vw, 4rem);
+    letter-spacing: -2%;
+    text-align: center;
+    text-transform: uppercase;
+    background: var(--text-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__img {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  &__card {
+    padding: clamp(1.875rem, 1.25rem + 3.13vw, 4.375rem) 24px;
+    background-color: #0de3ce1f;
+    border-radius: 24px;
+  }
+  &__text {
+    font-family: Clash Display;
+    font-weight: 500;
+    font-size: clamp(1.125rem, 1.031rem + 0.47vw, 1.5rem);
+    line-height: 160%;
+    letter-spacing: 0%;
+    span {
+      font-family: Clash Display;
+      font-weight: 700;
+      font-size: clamp(1.125rem, 1.031rem + 0.47vw, 1.5rem);
+      line-height: 160%;
+      letter-spacing: 0%;
+    }
+  }
+  &__bottom {
+    padding: 24px;
+    border-radius: 24px;
+    background-color: #0de3ce1f;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  &__bottom_title {
+    font-family: Clash Display;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    color: #007e72;
+  }
+  &__bottom_text {
+    font-family: Clash Display;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    color: #212831;
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 50px;
+    padding: 0 30px;
+    height: 60px;
+    button {
+      font-family: Clash Display;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: 0%;
+
+      background: var(--text-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  &__ready {
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+:root {
+  --main-gradient: linear-gradient(
+    135deg,
+    #007e72 0%,
+    #4de4a7 50.04%,
+    #95fcd2 100%
+  );
+  --dark-green: #28303f;
+  --text-gradient: linear-gradient(
+    135deg,
+    #007e72 0%,
+    #4de4a7 50.04%,
+    #95fcd2 100%
+  );
+}
+
+body,
+html {
+  overflow-x: hidden;
+
+  scroll-behavior: smooth;
+}

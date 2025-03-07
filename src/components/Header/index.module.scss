@@ -1,0 +1,46 @@
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  top: 0;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  &__logo {
+    svg {
+      width: clamp(6.25rem, 5.609rem + 3.2vw, 8.813rem);
+      height: clamp(1.875rem, 1.594rem + 1.41vw, 3rem);
+    }
+  }
+  &__content {
+    gap: clamp(1.25rem, 0.781rem + 2.34vw, 3.125rem);
+    align-items: center;
+  }
+  &__links {
+    gap: clamp(0.625rem, 0.313rem + 1.56vw, 1.875rem);
+    @media (max-width: 768px) {
+      display: none !important;
+    }
+  }
+  &__link {
+    font-family: "Clash Display", sans-serif;
+    font-weight: 600 !important;
+    font-size: clamp(0.688rem, 0.609rem + 0.39vw, 1rem);
+    color: #475467;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  &__link.active {
+    background-image: var(--main-gradient);
+    color: #fff;
+    border-radius: 20px;
+  }
+  &__button {
+    border: 1px solid rgba(0, 126, 114, 1);
+    color: rgba(0, 126, 114, 1) !important;
+    border-radius: 16px;
+  }
+}
